@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `about` (
-  `id_about` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `judul_kecil` varchar(100) NOT NULL,
   `judul_besar` varchar(100) NOT NULL,
   `deskripsi` text NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE `about` (
 -- Dumping data for table `about`
 --
 
-INSERT INTO `about` (`id_about`, `judul_kecil`, `judul_besar`, `deskripsi`, `foto`) VALUES
+INSERT INTO `about` (`id`, `judul_kecil`, `judul_besar`, `deskripsi`, `foto`) VALUES
 (1, 'blabla', 'blabla', 'asadads', 'Screenshot 2025-04-28 025809.png');
 
 -- --------------------------------------------------------
@@ -74,7 +74,7 @@ INSERT INTO `admin` (`id`, `username`, `password`, `first_name`, `last_name`, `e
 --
 
 CREATE TABLE `contact` (
-  `id_kontak` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `nama_kontak` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `no_hp` varchar(30) NOT NULL,
@@ -88,7 +88,7 @@ CREATE TABLE `contact` (
 --
 
 CREATE TABLE `home` (
-  `id_home` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `judul1` varchar(100) NOT NULL,
   `judul2` varchar(100) NOT NULL,
   `judul3` varchar(100) NOT NULL,
@@ -101,7 +101,7 @@ CREATE TABLE `home` (
 -- Dumping data for table `home`
 --
 
-INSERT INTO `home` (`id_home`, `judul1`, `judul2`, `judul3`, `judul4`, `foto1`, `foto2`) VALUES
+INSERT INTO `home` (`id`, `judul1`, `judul2`, `judul3`, `judul4`, `foto1`, `foto2`) VALUES
 (1, '1', '2', '3', '4', 'castorice-honkai-3840x2160-22114.jpg', '1393546.jpg');
 
 -- --------------------------------------------------------
@@ -111,7 +111,7 @@ INSERT INTO `home` (`id_home`, `judul1`, `judul2`, `judul3`, `judul4`, `foto1`, 
 --
 
 CREATE TABLE `produk` (
-  `id_produk` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `nama_produk` varchar(100) NOT NULL,
   `harga` int(11) NOT NULL,
   `foto` varchar(100) NOT NULL,
@@ -123,7 +123,7 @@ CREATE TABLE `produk` (
 -- Dumping data for table `produk`
 --
 
-INSERT INTO `produk` (`id_produk`, `nama_produk`, `harga`, `foto`, `deskripsi_produk`, `stok`) VALUES
+INSERT INTO `produk` (`id`, `nama_produk`, `harga`, `foto`, `deskripsi_produk`, `stok`) VALUES
 (5, 'asjodas', 1000, 'Screenshot 2025-04-29 002310.png', 'jamur', 100),
 (6, 'jamur', 120000, 'Screenshot 2025-04-28 104515.png', 'jamur', 100);
 
@@ -134,7 +134,7 @@ INSERT INTO `produk` (`id_produk`, `nama_produk`, `harga`, `foto`, `deskripsi_pr
 --
 
 CREATE TABLE `user` (
-  `id_user` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `nama_user` varchar(100) NOT NULL,
   `jenis_kelamin` varchar(30) NOT NULL,
   `no_hp` varchar(15) NOT NULL,
@@ -148,7 +148,7 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `nama_user`, `jenis_kelamin`, `no_hp`, `alamat`, `jabatan`, `tgl_lahir`, `foto`) VALUES
+INSERT INTO `user` (`id`, `nama_user`, `jenis_kelamin`, `no_hp`, `alamat`, `jabatan`, `tgl_lahir`, `foto`) VALUES
 (2, 'nadin', 'PEREMPUAN', '24214214', 'admin', 'bimo', '2025-07-17', 'Screenshot 2025-04-29 125716.png');
 
 --
@@ -159,7 +159,7 @@ INSERT INTO `user` (`id_user`, `nama_user`, `jenis_kelamin`, `no_hp`, `alamat`, 
 -- Indexes for table `about`
 --
 ALTER TABLE `about`
-  ADD PRIMARY KEY (`id_about`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `admin`
@@ -172,25 +172,25 @@ ALTER TABLE `admin`
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
-  ADD PRIMARY KEY (`id_kontak`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `home`
 --
 ALTER TABLE `home`
-  ADD PRIMARY KEY (`id_home`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `produk`
 --
 ALTER TABLE `produk`
-  ADD PRIMARY KEY (`id_produk`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -200,7 +200,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `about`
 --
 ALTER TABLE `about`
-  MODIFY `id_about` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `admin`
@@ -212,25 +212,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id_kontak` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `home`
 --
 ALTER TABLE `home`
-  MODIFY `id_home` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
